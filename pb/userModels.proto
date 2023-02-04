@@ -1,0 +1,12 @@
+syntax="proto3";
+package pb;
+option go_package="./pb";
+
+message UserModel {
+  // @gotags: json:"id"
+  uint32 UserId=1;
+  // @gotags: json:"name"
+  string UserName=2;
+  // @gotags: json:"nick_name"
+  string NickName=3;
+}

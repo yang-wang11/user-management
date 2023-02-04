@@ -1,0 +1,12 @@
+
+mode: debug
+
+server:
+  domain: api-gateway
+  port: 4000
+  version: 1.0
+  jwtSecret: Fantwo
+  grpcAddress: "127.0.0.1:10001"
+
+etcd:
+  address: 127.0.0.1:2379

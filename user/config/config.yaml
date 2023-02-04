@@ -1,0 +1,21 @@
+
+mode: debug
+
+server:
+  name: user
+  version: 1.0
+  address: 127.0.0.1
+  port: 10001
+  grpcAddress: "127.0.0.1:10001"
+
+mysql:
+  driverName: mysql
+  host: 127.0.0.1
+  port: 3306
+  database: manager
+  user: root
+  password: root
+  charset: utf8mb4
+
+etcd:
+  address: 127.0.0.1:2379

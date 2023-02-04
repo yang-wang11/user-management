@@ -1,0 +1,25 @@
+syntax="proto3";
+package pb;
+import "userModels.proto";
+option go_package="./pb";
+
+message UserRequest {
+  // @gotags: json:"nick_name" form:"nick_name"
+  string NickName=1;
+  // @gotags: json:"user_name" form:"user_name"
+  string UserName=2;
+  // @gotags: json:"password" form:"password"
+  string Password=3;
+  // @gotags: json:"password_confirm" form:"password_confirm"
+  string PasswordConfirm=4;
+}
+
+message UserResponse {
+  UserModel UserDetail=1;
+  uint32 ReturnCode=2;
+}
+
+service UserService {
+  rpc UserLogin(UserRequest) returns(UserResponse);
+  rpc UserRegister(UserRequest) returns(UserResponse);
+}
